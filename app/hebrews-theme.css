@@ -523,8 +523,7 @@ body[data-hebrews-chapter] .scripture-pane-header > * {
   color: #ece0c4 !important;
 }
 
-.word-note p,
-.study-card-empty {
+.word-note p {
   color: #b9ad90 !important;
 }
 
@@ -537,7 +536,6 @@ h2,
 .home-showcase-copy h1,
 .home-section-split h2,
 .background-hero h1,
-.background-hero h2,
 .background-section h2,
 .scripture-pane-header h1 {
   font-family: "Cinzel", Georgia, serif !important;
@@ -550,7 +548,6 @@ h2,
 .verse-study-card h3,
 .word-note-title,
 .word-note p,
-.study-card-empty,
 .home-showcase-description,
 .home-chapter-group h3 {
   font-family: var(--font-serif), Georgia, serif !important;
@@ -597,52 +594,6 @@ caption {
   font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif !important;
 }
 
-/* Chapter-screen type scale. */
-body[data-hebrews-chapter] .scripture-pane-header h1 {
-  font-family: "Cinzel", Georgia, serif !important;
-  font-weight: 500 !important;
-  letter-spacing: .015em !important;
-}
-
-body[data-hebrews-chapter] .scripture-chapter-summary {
-  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif !important;
-  font-size: clamp(1rem, 1.25vw, 1.25rem) !important;
-  font-weight: 400 !important;
-  letter-spacing: 0 !important;
-  line-height: 1.65 !important;
-}
-
-body[data-hebrews-chapter] .passage-outline-title,
-body[data-hebrews-chapter] .verse-copy {
-  font-family: var(--font-serif), Georgia, serif !important;
-}
-
-body[data-hebrews-chapter] .passage-outline-title {
-  font-weight: 600 !important;
-  letter-spacing: .01em !important;
-  line-height: 1.18 !important;
-}
-
-body[data-hebrews-chapter] .exposition-card-heading h2,
-body[data-hebrews-chapter] .commentary-reading,
-body[data-hebrews-chapter] .commentary-reading p {
-  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif !important;
-  letter-spacing: 0 !important;
-}
-
-body[data-hebrews-chapter] .exposition-card-heading h2 {
-  font-size: 1rem !important;
-  font-weight: 600 !important;
-  line-height: 1.45 !important;
-}
-
-body[data-hebrews-chapter] .commentary-reading,
-body[data-hebrews-chapter] .commentary-reading p {
-  font-size: var(--notes-font-size, 1.125rem) !important;
-  font-weight: 400 !important;
-  line-height: 1.82 !important;
-}
-
 @media (max-width: 980px) {
   .reader-header {
     grid-template-columns: minmax(0, 1fr) auto !important;
@@ -681,79 +632,6 @@ body[data-hebrews-route="home"] .home-title-prefix {
     margin-bottom: .75rem;
     font-size: 1rem !important;
     letter-spacing: .14em;
-  }
-}
-
-/* Chapter typography. */
-body[data-hebrews-chapter] .scripture-pane-header h1 {
-  max-width: none !important;
-  font-family: "Cinzel", Georgia, serif !important;
-  font-size: clamp(1.875rem, 2.3vw, 2.25rem) !important;
-  font-weight: 600 !important;
-  letter-spacing: .015em !important;
-  line-height: 2.5rem !important;
-}
-
-body[data-hebrews-chapter] .scripture-chapter-summary {
-  max-width: 42rem !important;
-  margin-top: .75rem !important;
-  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif !important;
-  font-size: 1rem !important;
-  font-weight: 400 !important;
-  letter-spacing: 0 !important;
-  line-height: 1.75rem !important;
-}
-
-body[data-hebrews-chapter] .passage-outline-divider {
-  background: transparent !important;
-  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif !important;
-  box-shadow: none !important;
-}
-
-body[data-hebrews-chapter] .passage-outline-range {
-  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif !important;
-  font-size: .72rem !important;
-  font-weight: 700 !important;
-  letter-spacing: .16em !important;
-  line-height: 1.35 !important;
-}
-
-body[data-hebrews-chapter] .passage-outline-title {
-  font-family: "Cinzel", Georgia, serif !important;
-  font-size: 1rem !important;
-  font-weight: 700 !important;
-  letter-spacing: .02em !important;
-  line-height: 1.35 !important;
-}
-
-body[data-hebrews-chapter] .verse-copy {
-  font-family: var(--font-serif), Georgia, serif !important;
-  font-size: var(--scripture-desktop-font-size, 1.25rem) !important;
-  font-weight: 400 !important;
-  letter-spacing: 0 !important;
-  line-height: 1.75rem !important;
-}
-
-body[data-hebrews-chapter] .exposition-card-heading h2 {
-  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif !important;
-  font-size: .875rem !important;
-  font-weight: 600 !important;
-  letter-spacing: 0 !important;
-  line-height: 1.25rem !important;
-}
-
-body[data-hebrews-chapter] .commentary-reading,
-body[data-hebrews-chapter] .commentary-reading p {
-  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif !important;
-  font-size: var(--notes-font-size, 1.125rem) !important;
-  font-weight: 400 !important;
-  letter-spacing: 0 !important;
-  line-height: 2rem !important;
-}
-
-@media (max-width: 640px) {
-  body[data-hebrews-chapter] .verse-copy {
-    font-size: var(--scripture-mobile-font-size, 1.125rem) !important;
   }
 }
 
@@ -1185,7 +1063,6 @@ body {
 .home-showcase-copy h1,
 .home-section-split h2,
 .background-hero h1,
-.background-hero h2,
 body[data-hebrews-chapter] .scripture-pane-header h1,
 body[data-hebrews-chapter] .passage-outline-title,
 body[data-hebrews-chapter] .reader-pane-toolbar-notes .reader-pane-kicker {
@@ -1267,15 +1144,10 @@ body[data-hebrews-chapter] .commentary-reading p {
 .home-chapter-group > p,
 .home-chapter-mini-grid,
 .home-chapter-mini-grid span,
-.background-kicker,
 .background-subtitle,
 .background-section-nav,
 .background-section-nav a,
-.background-section-label,
 .background-section-number,
-.background-fact-card,
-.background-fact-card h2,
-.background-fact-card p,
 .reader-pane-toolbar,
 .reader-pane-kicker,
 .reader-pane-subtitle,
@@ -1343,7 +1215,6 @@ body[data-hebrews-chapter] .reader-pane-toolbar-notes .reader-pane-kicker span {
 
 
 .home-section-split > p,
-.background-summary p,
 .background-section-body p {
   font-size: .98rem !important;
 }

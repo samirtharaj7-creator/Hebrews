@@ -436,46 +436,42 @@ function VerseStudyCard({
         <Library className="h-4 w-4" />
         Study Links
       </div>
-      {hasReferences || hasWordNotes ? (
-        <div className="verse-study-grid">
-          {hasReferences ? (
-            <div className="study-card-section">
-              <h3>Cross References</h3>
-              <div className="reference-chip-list">
-                {crossReferences.map((reference) => (
-                  <span className="reference-chip" key={reference}>
-                    {reference}
-                  </span>
-                ))}
-              </div>
+      <div className="verse-study-grid">
+        {hasReferences ? (
+          <div className="study-card-section">
+            <h3>Cross References</h3>
+            <div className="reference-chip-list">
+              {crossReferences.map((reference) => (
+                <span className="reference-chip" key={reference}>
+                  {reference}
+                </span>
+              ))}
             </div>
-          ) : null}
-          {hasWordNotes ? (
-            <div className="study-card-section study-card-section-wide">
-              <h3>Word / Phrase Notes</h3>
-              <div className="word-note-list">
-                {wordNotes.map((note) => (
-                  <article className="word-note" key={`${note.term}-${note.scriptureReferences.join("-")}`}>
-                    <div className="word-note-title">{note.term}</div>
-                    <p>{note.explanation}</p>
-                    {note.scriptureReferences.length > 0 ? (
-                      <div className="word-reference-list" aria-label={`${note.term} Scripture references`}>
-                        {note.scriptureReferences.map((reference) => (
-                          <span className="word-reference-chip" key={`${note.term}-${reference}`}>
-                            {reference}
-                          </span>
-                        ))}
-                      </div>
-                    ) : null}
-                  </article>
-                ))}
-              </div>
+          </div>
+        ) : null}
+        {hasWordNotes ? (
+          <div className="study-card-section study-card-section-wide">
+            <h3>Word / Phrase Notes</h3>
+            <div className="word-note-list">
+              {wordNotes.map((note) => (
+                <article className="word-note" key={`${note.term}-${note.scriptureReferences.join("-")}`}>
+                  <div className="word-note-title">{note.term}</div>
+                  <p>{note.explanation}</p>
+                  {note.scriptureReferences.length > 0 ? (
+                    <div className="word-reference-list" aria-label={`${note.term} Scripture references`}>
+                      {note.scriptureReferences.map((reference) => (
+                        <span className="word-reference-chip" key={`${note.term}-${reference}`}>
+                          {reference}
+                        </span>
+                      ))}
+                    </div>
+                  ) : null}
+                </article>
+              ))}
             </div>
-          ) : null}
-        </div>
-      ) : (
-        <p className="study-card-empty">Study links are ready to be added for this verse.</p>
-      )}
+          </div>
+        ) : null}
+      </div>
     </section>
   );
 }

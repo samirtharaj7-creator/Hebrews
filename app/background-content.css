@@ -116,16 +116,6 @@ body[data-hebrews-route="introduction"] .hebrews-background-page .background-her
   outline-offset: 3px;
 }
 
-.hebrews-background-page .background-section-body > p strong {
-  color: #f3e8cc;
-  font-weight: 600;
-}
-
-.hebrews-background-page .background-section-body > p em,
-.background-data-table em {
-  color: #e0c37e;
-}
-
 .hebrews-background-page .background-section-body > .background-subsection {
   max-width: 56rem;
   margin-top: 1.35rem;
