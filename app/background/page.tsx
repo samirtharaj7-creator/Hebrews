@@ -1,18 +1,10 @@
 import type { Metadata } from "next";
-import { BookOpen, CalendarDays, MapPinned, Users } from "lucide-react";
-import { getBackgroundContent, type BackgroundBlock, type BackgroundFact } from "@/lib/background";
+import { getBackgroundContent, type BackgroundBlock } from "@/lib/background";
 
 export const metadata: Metadata = {
   title: "Introduction to the Book of Hebrews",
   description: "Explore the authorship, date, audience, literary form, biblical world, structure, and purpose of Hebrews."
 };
-
-function FactIcon({ icon }: { icon: BackgroundFact["icon"] }) {
-  if (icon === "location") return <MapPinned className="h-5 w-5" />;
-  if (icon === "period") return <CalendarDays className="h-5 w-5" />;
-  if (icon === "mission") return <Users className="h-5 w-5" />;
-  return <BookOpen className="h-5 w-5" />;
-}
 
 function BackgroundBlockView({ block, sectionTitle }: { block: BackgroundBlock; sectionTitle: string }) {
   if (block.type === "paragraph") return <p>{block.text}</p>;
@@ -61,11 +53,6 @@ export default function BackgroundPage() {
       </section>
       <section className="background-shell" aria-label="Introduction to Hebrews">
         <div className="background-study">
-          <section className="background-fact-grid" aria-label="Hebrews introduction facts">
-            {content.facts.map((fact) => (
-              <article key={fact.label} className="background-fact-card"><FactIcon icon={fact.icon} /><h2>{fact.label}</h2><p>{fact.value}</p></article>
-            ))}
-          </section>
           <div className="background-section-list">
             {content.sections.map((section, index) => (
               <section key={section.id} id={section.id} className="background-section">

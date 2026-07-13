@@ -21,11 +21,6 @@ const block = z.discriminatedUnion("type", [paragraphBlock, subsectionBlock, com
 const backgroundContentSchema = z.object({
   title: text,
   subtitle: text,
-  facts: z.array(z.object({
-    icon: z.enum(["location", "period", "letters", "mission"]),
-    label: text,
-    value: text
-  })).length(4),
   sections: z.array(z.object({
     id: text,
     scope: text,
@@ -36,7 +31,6 @@ const backgroundContentSchema = z.object({
 
 export type BackgroundContent = z.infer<typeof backgroundContentSchema>;
 export type BackgroundBlock = BackgroundContent["sections"][number]["blocks"][number];
-export type BackgroundFact = BackgroundContent["facts"][number];
 
 export function getBackgroundContent(): BackgroundContent {
   const path = join(process.cwd(), "content", "background.json");

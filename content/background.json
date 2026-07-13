@@ -1,12 +1,6 @@
 {
   "title": "Introduction to the Book of Hebrews",
   "subtitle": "A concise guide to Hebrews’ author, date, audience, setting, structure, and central message.",
-  "facts": [
-    { "icon": "letters", "label": "Probable Author", "value": "Paul, possibly working through a skilled literary associate" },
-    { "icon": "period", "label": "Probable Date", "value": "Probably before A.D. 70; the exact date is uncertain" },
-    { "icon": "location", "label": "Probable Setting", "value": "Italy, perhaps Rome; the destination remains debated" },
-    { "icon": "mission", "label": "Probable Audience", "value": "An established community of Jewish Christians under pressure" }
-  ],
   "sections": [
     {
       "id": "author-date-and-audience",
