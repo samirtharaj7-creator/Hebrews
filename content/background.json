@@ -1,0 +1,209 @@
+{
+  "title": "Historical Background",
+  "subtitle": "The author, audience, historical crisis, sanctuary setting, and pastoral purpose behind the Letter to the Hebrews.",
+  "readingLens": [
+    "Hebrews does not name its author, recipients, city, or date. Some historical details are clear, while others remain probable or uncertain. Its central purpose is unmistakable: believers who have grown weary must draw near to God, hold fast their confession, strengthen one another, and endure through faith in the Son, their sacrifice and living High Priest."
+  ],
+  "facts": [
+    { "icon": "letters", "label": "Probable Author", "value": "Paul, possibly working through a skilled literary associate" },
+    { "icon": "period", "label": "Probable Date", "value": "Probably before A.D. 70; the exact date is uncertain" },
+    { "icon": "location", "label": "Probable Setting", "value": "Italy, perhaps Rome; the destination remains debated" },
+    { "icon": "mission", "label": "Probable Audience", "value": "An established community of Jewish Christians under pressure" }
+  ],
+  "sections": [
+    {
+      "id": "author-date-and-audience",
+      "scope": "Historical Evidence",
+      "title": "Author, Date, and Audience",
+      "blocks": [
+        {
+          "type": "subsection",
+          "title": "Paul as the Most Likely Author",
+          "body": [
+            "Hebrews is formally anonymous. It begins with God’s revelation through the Son rather than a conventional salutation, and its closing description as a “word of exhortation” still does not identify the writer. The ancient title “To the Hebrews” describes the work but is not an original authorial signature.",
+            "The evidence points most strongly to Paul, perhaps with help from a literary associate who shaped the polished Greek. Hebrews was associated with Paul early, circulated among his letters, and refers to “our brother Timothy,” placing the author within Paul’s missionary circle. Its theology also resembles Paul’s teaching about Christ, creation, spiritual gifts, incarnation, covenant, faith, sanctification, Abrahamic promise, and access to God. The sermon-like form may explain the missing name, but anonymity leaves the question open."
+          ]
+        },
+        {
+          "type": "subsection",
+          "title": "Difficulties and Alternatives",
+          "body": [
+            "Hebrews is more rhetorically polished and deliberately organized than Paul’s acknowledged letters. Hebrews 2:3 also includes the writer among those to whom salvation was confirmed by the Lord’s hearers, though Paul was not an earthly disciple and the verse may use a pastoral “we.” Early readers suggested that Paul supplied the thought while a coworker translated or arranged it.",
+            "Barnabas, Apollos, Luke, Clement of Rome, Silas, and others have been proposed, but none can be established from the surviving evidence. Paul remains the most likely authorial source, possibly working through a skilled associate, while certainty is unavailable."
+          ]
+        },
+        {
+          "type": "subsection",
+          "title": "Date and Place",
+          "body": [
+            "Hebrews was probably written before Jerusalem’s destruction in A.D. 70. Its discussion of priests, sacrifices, and sanctuary would have been especially forceful while the temple remained visible, and it never mentions the destruction. Yet the argument centers on the wilderness tabernacle, so silence alone cannot prove the date. Hebrews 13:23 reports Timothy’s release and anticipated travel with him, but the book does not establish a year.",
+            "The greeting from “they of Italy” may indicate an author in Italy or Italians abroad greeting believers at home. The letter may therefore have been written in Italy, probably Rome, or sent to Rome. The phrase permits both possibilities."
+          ]
+        },
+        {
+          "type": "subsection",
+          "title": "The Readers",
+          "body": [
+            "The readers were established Christians who had endured persecution, followed recognized leaders, assembled for worship, and known the faith long enough to teach others. They were most likely Jewish Christians: the argument assumes deep knowledge of Moses, Joshua, the wilderness, Aaronic priesthood, Melchizedek, sanctuary services, covenant blood, Jeremiah’s new-covenant promise, the Day of Atonement, and sacrificial purification.",
+            "Their location is less certain. Jerusalem or Judea fits possible pressure to seek safety in the visible temple order. Rome remains possible because of the Italian greeting, the early Roman knowledge of Hebrews, and the community’s experience of property loss. Their scriptural and sanctuary formation is clearer than their address."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "historical-situation",
+      "scope": "The Community’s Crisis",
+      "title": "Earlier Courage and Present Weariness",
+      "blocks": [
+        {
+          "type": "subsection",
+          "title": "Persecution and Loss",
+          "body": [
+            "Hebrews 10:32–34 recalls an earlier conflict of suffering. Some believers were publicly insulted and mistreated; others stood beside them, showed compassion to prisoners, and accepted the seizure of their property because they trusted God’s enduring inheritance. Hebrews 12:4 suggests that the present struggle had not yet required their own blood. The text does not identify a specific city, official, or persecution."
+          ]
+        },
+        {
+          "type": "subsection",
+          "title": "Weariness and Neglected Fellowship",
+          "body": [
+            "The community that once endured joyfully had become tired. The readers were dull of hearing, slow to mature, and in danger of losing confidence. Prolonged waiting, social pressure, and remembered suffering had weakened them. Some were neglecting the assembly, yet perseverance required believers to encourage one another, provoke love and good works, and guard one another against hardened unbelief."
+          ]
+        },
+        {
+          "type": "subsection",
+          "title": "The Danger of Shrinking Back",
+          "body": [
+            "Hebrews warns against drifting, neglect, unbelief, falling away, casting aside confidence, and refusing the One who speaks from heaven. A visible priesthood and established religious order may have appeared safer than allegiance to a rejected Messiah ministering in heaven, although the letter never explicitly says that the readers planned to return to Judaism.",
+            "The “willful sin” of Hebrews 10:26 is not every conscious failure after conversion. The context describes settled repudiation of the Son, covenant blood, and Spirit of grace. Hebrews 6:4–8 likewise warns against decisive falling away, not against the possibility of repentance for anyone who longs to return. The writer still expects “better things” and identifies the community with those who believe rather than draw back."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "purpose-and-message",
+      "scope": "A Word of Exhortation",
+      "title": "Purpose and Main Message",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "God has spoken fully through His Son. The crucified, risen, and ascended Son is the once-for-all sacrifice and living High Priest in the true heavenly sanctuary. Therefore believers must draw near, hold fast, encourage one another, and endure until He returns with final salvation."
+        },
+        {
+          "type": "subsection",
+          "title": "The Sufficiency of Christ",
+          "body": [
+            "Christ surpasses the prophets as God’s climactic revelation, angels as the divine Creator and King, Moses as Son over God’s house, Joshua as giver of the greater rest, and Aaron as the permanent High Priest. He mediates the better covenant, ministers in the true sanctuary, and offers the better sacrifice. Nothing gained by abandoning Him could compensate for losing the only effective sacrifice, enduring priesthood, covenant mediator, and way to God."
+          ]
+        },
+        {
+          "type": "subsection",
+          "title": "Faith and Perseverance",
+          "body": [
+            "Weary believers have a High Priest who understands temptation, an anchor within the veil, bold access through Christ’s blood, faithful witnesses, and Jesus seated at God’s right hand. Hebrews 11 portrays faith as ordering life around God’s promise when fulfillment remains unseen. Perseverance is faith extended through time.",
+            "The warnings do not destroy assurance; they oppose assurance detached from continuing faith. Genuine confidence rests in Christ and expresses itself through trust, obedience, fellowship, holiness, and endurance. Christ will appear again with salvation, and God’s final shaking will leave an unshakable kingdom."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "priesthood-and-sacrifice",
+      "scope": "Sanctuary Foundations",
+      "title": "Priesthood, Melchizedek, and Sacrifice",
+      "blocks": [
+        {
+          "type": "subsection",
+          "title": "The Earthly Sanctuary",
+          "body": [
+            "The earthly sanctuary was divinely given. Its priesthood, sacrifices, covenant rituals, and annual services taught truths about sin, mediation, purification, holiness, and access to God. Yet repeated animal sacrifices could not perfect the conscience or remove sin finally. The sanctuary was a copy, shadow, and parable pointing to Christ’s effective ministry."
+          ]
+        },
+        {
+          "type": "subsection",
+          "title": "The Order of Melchizedek",
+          "body": [
+            "Jesus came from Judah, so His priesthood rests not on Levitical descent but on God’s declaration: “Thou art a priest for ever after the order of Melchizedek.” Abraham gave Melchizedek a tithe and received his blessing, showing the superiority of this priestly order.",
+            "Hebrews 7:3 does not make Melchizedek an immortal divine being or Christ Himself. Genesis simply records no priestly genealogy, birth, or death for him, and Hebrews uses that silence typologically. Melchizedek was a historical priest and type; Christ is the reality whose priesthood rests on God’s oath and the power of an endless life."
+          ]
+        },
+        {
+          "type": "subsection",
+          "title": "The Once-for-All Sacrifice",
+          "body": [
+            "Jesus is both High Priest and sacrifice. Sinless and undefiled, He offered Himself once for all, obtaining redemption, cleansing, and sanctification. Calvary needs no supplementation by repeated offerings or human merit. Yet final sacrifice does not mean inactive priesthood: the sacrifice is complete and unrepeatable, while the living Priest continues to intercede, mediate, represent, cleanse, and apply its benefits."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "heavenly-ministry-and-judgment",
+      "scope": "Christ’s Present Work",
+      "title": "The Heavenly Sanctuary and Judgment",
+      "blocks": [
+        {
+          "type": "subsection",
+          "title": "The Enthroned High Priest",
+          "body": [
+            "After making purification for sins, Christ rose, passed through the heavens, entered within the veil, and sat at God’s right hand. His ascension was entrance into royal and priestly ministry. Hebrews 8:1–2 names the central point: believers have a High Priest ministering in the true sanctuary established by God, not merely a metaphor for the cross or church.",
+            "Christ lives to intercede and represent those who approach God through Him. His shared humanity makes Him a sympathetic helper; His sacrifice provides pardon, cleansing, sanctification, access, and covenant transformation. The cross and heavenly ministry form one saving work: the completed sacrifice is the foundation, and the living priesthood administers its benefits."
+          ]
+        },
+        {
+          "type": "subsection",
+          "title": "Cleansing and Judgment",
+          "body": [
+            "Hebrews speaks of purification for sins, cleansed consciences, sanctification through Christ’s blood, and heavenly things cleansed by better sacrifices. It establishes the heavenly sanctuary, effective blood, cleansing, and ongoing priestly ministry, but does not supply a prophetic date or a complete chronology of successive phases.",
+            "Hebrews and Daniel address complementary aspects of heavenly judgment. Hebrews supplies the Christological and sanctuary foundation; Daniel 7 presents judgment before the kingdom; and Daniel 8:14 speaks of the sanctuary’s cleansing or vindication. Judgment does not replace grace with merit. The believer’s Judge is also Sacrifice, High Priest, Intercessor, and Covenant Mediator. Christ’s ministry culminates when He appears again to bring final salvation."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "new-covenant-and-access",
+      "scope": "Promise Fulfilled",
+      "title": "The New Covenant and Access to God",
+      "blocks": [
+        {
+          "type": "subsection",
+          "title": "The Law Written on the Heart",
+          "body": [
+            "Hebrews 8 quotes Jeremiah’s promise of a better covenant. The weakness of the first covenant lay not in God’s moral law but in a people who did not continue in it. In the new covenant God writes His laws in mind and heart, makes them His people, brings them to know Him, shows mercy, and remembers sin no more. Grace internalizes rather than abolishes the law; forgiveness and obedience belong together."
+          ]
+        },
+        {
+          "type": "subsection",
+          "title": "A New and Living Way",
+          "body": [
+            "The old sanctuary dramatized restricted access. Christ opens a new and living way: believers may approach the throne of grace, draw near through a better hope, enter the heavenly sanctuary by faith, and come to Mount Zion, God the Judge, Jesus the Mediator, and the blood that speaks a better word. This is reverent confidence grounded entirely in Christ."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "structure",
+      "scope": "Reading Map",
+      "title": "The Structure of Hebrews",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hebrews alternates theological exposition with pastoral exhortation. Doctrine explains why believers should persevere; exhortation shows how doctrine shapes life."
+        },
+        {
+          "type": "comparison",
+          "title": "A Reading Map of Hebrews",
+          "headers": ["Passage", "Theological Movement", "Pastoral Emphasis"],
+          "rows": [
+            ["1:1–4:13", "God speaks through the Son, who surpasses angels and Moses, shares humanity, defeats death, and offers a greater rest", "Give earnest heed, resist unbelief, and enter God’s rest by faith"],
+            ["4:14–7:28", "Jesus is the sympathetic High Priest after the order of Melchizedek, appointed by oath and possessing an endless life", "Hold fast, approach the throne of grace, mature, and inherit through faith and patience"],
+            ["8:1–10:18", "Christ ministers in the true heavenly sanctuary, mediates the new covenant, and offers Himself once for all", "Trust the effective sacrifice, cleansed conscience, and covenant promises"],
+            ["10:19–12:29", "Access through Christ leads to faith, endurance, discipline, Zion, judgment, and the unshakable kingdom", "Draw near, hold fast, encourage one another, run with endurance, and do not refuse God’s voice"],
+            ["13:1–25", "The eternal covenant shapes community life and the closing benediction", "Practice love, hospitality, faithfulness, contentment, praise, generosity, obedience, and prayer"]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "The whole argument converges on Jesus Christ as God’s supreme revelation, once-for-all sacrifice, permanent High Priest, mediator of the new covenant, and minister of the true heavenly sanctuary. Therefore believers must draw near, hold fast, encourage one another, pursue holiness, and endure until He appears again."
+        }
+      ]
+    }
+  ]
+}
