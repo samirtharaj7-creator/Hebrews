@@ -12,14 +12,21 @@
   padding: clamp(4rem, 7vw, 6.5rem) clamp(2rem, 6vw, 5.5rem) !important;
 }
 
+body[data-hebrews-route="introduction"] .hebrews-background-page .background-hero {
+  border-bottom: 0 !important;
+  background: var(--background) !important;
+}
+
 .hebrews-background-page .background-hero::before {
   background-position: center 18% !important;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 42%, rgba(0, 0, 0, 0.88) 58%, rgba(0, 0, 0, 0.48) 78%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 42%, rgba(0, 0, 0, 0.88) 58%, rgba(0, 0, 0, 0.48) 78%, transparent 100%);
   opacity: 0.66 !important;
 }
 
 .hebrews-background-page .background-hero::after {
   background:
-    linear-gradient(180deg, rgba(8, 21, 33, 0) 42%, rgba(8, 21, 33, 0.28) 70%, #081521 100%),
+    linear-gradient(180deg, rgba(14, 31, 52, 0) 34%, rgba(14, 31, 52, 0.12) 52%, rgba(14, 31, 52, 0.5) 74%, rgba(14, 31, 52, 0.86) 90%, var(--background) 100%),
     linear-gradient(90deg, rgba(8, 21, 33, 0.99) 0%, rgba(8, 21, 33, 0.92) 38%, rgba(8, 21, 33, 0.54) 72%, rgba(8, 21, 33, 0.74) 100%),
     radial-gradient(circle at 78% 18%, rgba(216, 184, 102, 0.16), rgba(216, 184, 102, 0) 26rem) !important;
 }
@@ -89,6 +96,16 @@
   background: rgba(18, 38, 63, 0.96);
   color: #f3e8cc;
   font-weight: 600;
+}
+
+.hebrews-background-page .background-section-nav {
+  position: relative;
+  z-index: 2;
+  margin-top: clamp(-2.5rem, -3vw, -1.75rem) !important;
+}
+
+.hebrews-background-page .background-section-nav-scroll {
+  margin-top: 0 !important;
 }
 
 .hebrews-background-page .background-section-nav a span {
@@ -208,7 +225,13 @@
 
   .hebrews-background-page .background-hero::before {
     background-position: 64% top !important;
+    -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 52%, rgba(0, 0, 0, 0.84) 70%, rgba(0, 0, 0, 0.34) 88%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 0%, #000 52%, rgba(0, 0, 0, 0.84) 70%, rgba(0, 0, 0, 0.34) 88%, transparent 100%);
     opacity: 0.52 !important;
+  }
+
+  .hebrews-background-page .background-section-nav {
+    margin-top: -1.25rem !important;
   }
 
   .hebrews-background-page .background-title-prefix {
