@@ -45,8 +45,11 @@ export default function BackgroundPage() {
     <main className="background-page hebrews-background-page">
       <section className="background-hero" aria-labelledby="background-title">
         <div className="background-hero-copy">
-          <p className="background-kicker"><BookOpen className="h-4 w-4" />Introduction</p>
-          <h1 id="background-title">{content.title}</h1>
+          <p className="background-kicker"><BookOpen className="h-4 w-4" />Book Background</p>
+          <h1 id="background-title" aria-label={content.title}>
+            <span className="background-title-prefix">Introduction to the Book of</span>
+            <span className="background-title-book">Hebrews</span>
+          </h1>
           <p className="background-subtitle">{content.subtitle}</p>
         </div>
       </section>
