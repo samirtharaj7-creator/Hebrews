@@ -1,9 +1,6 @@
 {
   "title": "Introduction to the Book of Hebrews",
   "subtitle": "A concise guide to Hebrews’ author, date, audience, setting, structure, and central message.",
-  "readingLens": [
-    "Hebrews does not name its author, recipients, city, or date. Some historical details are clear, while others remain probable or uncertain. Its central purpose is unmistakable: believers who have grown weary must draw near to God, hold fast their confession, strengthen one another, and endure through faith in the Son, their sacrifice and living High Priest."
-  ],
   "facts": [
     { "icon": "letters", "label": "Probable Author", "value": "Paul, possibly working through a skilled literary associate" },
     { "icon": "period", "label": "Probable Date", "value": "Probably before A.D. 70; the exact date is uncertain" },

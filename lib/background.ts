@@ -21,7 +21,6 @@ const block = z.discriminatedUnion("type", [paragraphBlock, subsectionBlock, com
 const backgroundContentSchema = z.object({
   title: text,
   subtitle: text,
-  readingLens: z.array(text).min(1),
   facts: z.array(z.object({
     icon: z.enum(["location", "period", "letters", "mission"]),
     label: text,

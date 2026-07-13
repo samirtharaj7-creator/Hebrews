@@ -61,10 +61,6 @@ export default function BackgroundPage() {
       </section>
       <section className="background-shell" aria-label="Introduction to Hebrews">
         <div className="background-study">
-          <section className="background-summary" aria-labelledby="background-reading-lens">
-            <p id="background-reading-lens" className="background-section-label">Reading Lens</p>
-            {content.readingLens.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-          </section>
           <section className="background-fact-grid" aria-label="Hebrews introduction facts">
             {content.facts.map((fact) => (
               <article key={fact.label} className="background-fact-card"><FactIcon icon={fact.icon} /><h2>{fact.label}</h2><p>{fact.value}</p></article>

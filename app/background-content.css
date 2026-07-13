@@ -87,10 +87,6 @@ body[data-hebrews-route="introduction"] .hebrews-background-page .background-her
   color: #d8b866;
 }
 
-.hebrews-background-page .background-summary p + p {
-  margin-top: 0.9rem;
-}
-
 .hebrews-background-page .background-section-nav a {
   border-color: rgba(216, 184, 102, 0.38);
   background: rgba(18, 38, 63, 0.96);
