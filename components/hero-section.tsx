@@ -16,7 +16,7 @@ export function HeroSection() {
               <Link href="/hebrews/1" className="home-showcase-primary">
                 Read chapter 1 <ArrowRight className="h-4 w-4" />
               </Link>
-              <Link href="/background" className="home-showcase-secondary">Explore the background</Link>
+              <Link href="/background" className="home-showcase-secondary">Explore the introduction</Link>
             </div>
           </div>
         </section>
