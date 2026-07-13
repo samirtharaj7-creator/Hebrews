@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getBackgroundContent, type BackgroundBlock } from "@/lib/background";
+import { preload } from "react-dom";
 
 export const metadata: Metadata = {
   title: "Introduction to the Book of Hebrews",
@@ -32,6 +33,12 @@ function BackgroundBlockView({ block, sectionTitle }: { block: BackgroundBlock; 
 }
 
 export default function BackgroundPage() {
+  preload("/assets/hebrews-hero-engraving.webp", {
+    as: "image",
+    type: "image/webp",
+    fetchPriority: "high"
+  });
+
   const content = getBackgroundContent();
   return (
     <main className="background-page hebrews-background-page">
