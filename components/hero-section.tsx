@@ -23,7 +23,7 @@ export function HeroSection() {
         <section className="home-chapter-study" aria-labelledby="home-chapter-title">
           <div className="home-section-split">
             <div><p className="home-section-kicker">13 chapters</p><h2 id="home-chapter-title">Choose a chapter to begin.</h2></div>
-            <p id="content-status">The complete KJV text is in place; commentary fields remain ready for intake.</p>
+            <p id="content-status">The complete KJV text and verse-by-verse commentary are ready for study.</p>
           </div>
           <div className="home-chapter-group-grid">
             <article className="home-chapter-group">

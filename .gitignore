@@ -10,9 +10,3 @@ __pycache__/
 # Local-only copyrighted research corpus and full-text search index.
 .research/
 tmp/pdfs/
-
-# Legacy named source inventory; keep source identities out of GitHub.
-research/corinthians-source-manifest.json
-
-# Reversible archive of the copied prototype content.
-.archive/

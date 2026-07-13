@@ -34,7 +34,7 @@ export function getHebrewsChapter(chapter: number | string): ChapterContent | nu
   const parsed = ChapterContentSchema.parse(JSON.parse(readFileSync(path, "utf8")));
   const expectedVerseCount = HEBREWS.verseCounts[chapterNumber - 1];
   if (parsed.chapterNumber !== chapterNumber || parsed.verses.length !== expectedVerseCount) {
-    throw new Error(`Hebrews ${chapterNumber} intake structure is invalid.`);
+    throw new Error(`Hebrews ${chapterNumber} content structure is invalid.`);
   }
   parsed.verses.forEach((verse, index) => {
     if (verse.verse !== `Hebrews ${chapterNumber}:${index + 1}`) {

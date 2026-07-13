@@ -3,19 +3,18 @@ import { GlobalFooter, GlobalShell } from "@/components/global-shell";
 import { ReadingProgressBar } from "@/components/reading-progress";
 import { RouteStyling } from "@/components/route-styling";
 import { SiteHeader } from "@/components/site-header";
-import { TooltipProvider } from "@/components/ui/tooltip";
 import "./globals.css";
 import "./global-shell.css";
-import "./corinthians-illustrated.css";
+import "./hebrews-theme.css";
 import "./background-content.css";
-import "./corinthians-reader.css";
+import "./hebrews-reader.css";
 
 export const metadata: Metadata = {
   title: {
     default: "Hebrews Commentary",
     template: "%s | Hebrews Commentary"
   },
-  description: "A thirteen-chapter Hebrews commentary workspace prepared for content intake.",
+  description: "A thirteen-chapter study of Hebrews with the King James text and verse-by-verse commentary.",
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://hebrews.mybibleexplorer.com")
 };
 
@@ -30,12 +29,12 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@400;500;600&display=swap"
         />
       </head>
-      <body className="mbe-shell-managed" data-romans-route="home">
+      <body className="mbe-shell-managed" data-hebrews-route="home">
         <RouteStyling />
         <GlobalShell />
         <ReadingProgressBar />
         <SiteHeader />
-        <TooltipProvider>{children}</TooltipProvider>
+        {children}
         <GlobalFooter />
       </body>
     </html>

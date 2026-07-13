@@ -15,16 +15,14 @@ export function RouteStyling() {
     html.classList.add("dark");
     html.style.colorScheme = "dark";
     body.classList.add("mbe-shell-managed");
-    body.removeAttribute("data-romans-chapter");
+    body.removeAttribute("data-hebrews-chapter");
 
-    if (path === "/") body.dataset.romansRoute = "home";
-    else if (path === "/introduction" || path === "/background") body.dataset.romansRoute = "introduction";
-    else if (path === "/search") body.dataset.romansRoute = "search";
-    else if (path === "/articles" || path.startsWith("/articles/")) body.dataset.romansRoute = "articles";
+    if (path === "/") body.dataset.hebrewsRoute = "home";
+    else if (path === "/background") body.dataset.hebrewsRoute = "introduction";
     else if (chapterMatch) {
-      body.dataset.romansRoute = "commentary";
-      body.dataset.romansChapter = chapterMatch[1];
-    } else body.removeAttribute("data-romans-route");
+      body.dataset.hebrewsRoute = "commentary";
+      body.dataset.hebrewsChapter = chapterMatch[1];
+    } else body.removeAttribute("data-hebrews-route");
   }, [pathname]);
 
   return null;

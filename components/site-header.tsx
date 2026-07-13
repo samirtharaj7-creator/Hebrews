@@ -4,7 +4,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { BookOpenText, Menu } from "lucide-react";
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
 
 const links = [
   { href: "/", label: "Home", active: (pathname: string) => pathname === "/" },
@@ -42,16 +41,15 @@ export function SiteHeader() {
       </nav>
 
       <div className="reader-header-actions">
-        <Button
+        <button
+          type="button"
           className="reader-menu-button"
-          variant="ghost"
-          size="icon"
           aria-label="Open menu"
           aria-expanded={open}
           onClick={() => setOpen((value) => !value)}
         >
           <Menu className="h-5 w-5" />
-        </Button>
+        </button>
       </div>
 
       {open ? (

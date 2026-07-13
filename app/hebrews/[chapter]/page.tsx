@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ chapter: 
   const { chapter } = await params;
   const content = getHebrewsChapter(chapter);
   if (!content) notFound();
-  return { title: `Hebrews ${content.chapterNumber}`, description: `Hebrews ${content.chapterNumber} commentary intake.` };
+  return { title: `Hebrews ${content.chapterNumber}`, description: `Hebrews ${content.chapterNumber} with the King James text and verse-by-verse commentary.` };
 }
 
 export default async function HebrewsChapterPage({ params }: { params: Promise<{ chapter: string }> }) {
