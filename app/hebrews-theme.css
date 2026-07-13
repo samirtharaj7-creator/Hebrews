@@ -237,14 +237,20 @@ body[data-hebrews-route="home"] .home-showcase-hero {
   min-height: clamp(34rem, 68vh, 46rem) !important;
   margin: 0 !important;
   padding: clamp(4rem, 8vw, 7rem) clamp(2rem, 6vw, 6.5rem) clamp(3rem, 6vw, 5rem) !important;
-  border-bottom: 1px solid rgba(201, 164, 76, .18) !important;
-  background: #0b1f3a !important;
+  border-bottom: 0 !important;
+  background: transparent !important;
 }
 
-body[data-hebrews-route="home"] .home-showcase-hero::before {
+body[data-hebrews-route="home"] .home-showcase-hero::before,
+body[data-hebrews-route="home"] .home-showcase-hero::after {
   content: "";
   position: absolute;
   inset: 0;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 48%, rgba(0, 0, 0, .78) 68%, rgba(0, 0, 0, .34) 84%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 48%, rgba(0, 0, 0, .78) 68%, rgba(0, 0, 0, .34) 84%, transparent 100%);
+}
+
+body[data-hebrews-route="home"] .home-showcase-hero::before {
   z-index: -2;
   background: url("/assets/hebrews-hero-engraving.png?v=1") center top / cover no-repeat;
   filter: saturate(.86) contrast(1.08);
@@ -252,9 +258,6 @@ body[data-hebrews-route="home"] .home-showcase-hero::before {
 }
 
 body[data-hebrews-route="home"] .home-showcase-hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
   z-index: -1;
   background:
     radial-gradient(circle at 80% 28%, rgba(216, 184, 102, .18), rgba(216, 184, 102, 0) 28rem),
@@ -262,14 +265,17 @@ body[data-hebrews-route="home"] .home-showcase-hero::after {
     linear-gradient(180deg, rgba(8, 21, 33, .18), rgba(8, 21, 33, .88));
 }
 
-
 body[data-hebrews-route="home"] .home-chapter-study {
+  position: relative;
+  z-index: 1;
   width: min(calc(100% - clamp(2rem, 8vw, 6rem)), 92rem) !important;
+  margin-top: clamp(-3.5rem, -4vw, -2.25rem) !important;
   margin-inline: auto !important;
 }
 
-body[data-hebrews-route="home"] .home-chapter-study {
-  margin-top: 0 !important;
+body[data-hebrews-route="home"] .home-section-split {
+  border-top: 0 !important;
+  padding-top: 1.5rem !important;
 }
 
 body[data-hebrews-route="home"] .home-showcase-copy {
