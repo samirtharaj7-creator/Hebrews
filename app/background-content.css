@@ -116,24 +116,6 @@ body[data-hebrews-route="introduction"] .hebrews-background-page .background-her
   outline-offset: 3px;
 }
 
-.background-scope {
-  display: inline-flex;
-  align-items: center;
-  min-height: 1.8rem;
-  margin-bottom: 0.8rem;
-  border: 1px solid rgba(201, 164, 76, 0.22);
-  border-radius: 999px;
-  background: rgba(201, 164, 76, 0.1);
-  padding: 0.35rem 0.7rem;
-  color: #d8b866;
-  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  line-height: 1;
-  text-transform: uppercase;
-}
-
 .hebrews-background-page .background-section-body > p strong {
   color: #f3e8cc;
   font-weight: 600;

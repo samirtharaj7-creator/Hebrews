@@ -58,7 +58,7 @@ export default function BackgroundPage() {
               <section key={section.id} id={section.id} className="background-section">
                 <span className="background-section-number">{String(index + 1).padStart(2, "0")}</span>
                 <div className="background-section-body">
-                  <span className="background-scope">{section.scope}</span><h2>{section.title}</h2>
+                  <h2>{section.title}</h2>
                   {section.blocks.map((block, blockIndex) => <BackgroundBlockView key={`${section.id}-${block.type}-${blockIndex}`} block={block} sectionTitle={section.title} />)}
                 </div>
               </section>

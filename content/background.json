@@ -4,7 +4,6 @@
   "sections": [
     {
       "id": "author-date-and-audience",
-      "scope": "Historical Evidence",
       "title": "Author, Date, and Audience",
       "blocks": [
         {
@@ -43,7 +42,6 @@
     },
     {
       "id": "historical-situation",
-      "scope": "The Community’s Crisis",
       "title": "Earlier Courage and Present Weariness",
       "blocks": [
         {
@@ -72,7 +70,6 @@
     },
     {
       "id": "purpose-and-message",
-      "scope": "A Word of Exhortation",
       "title": "Purpose and Main Message",
       "blocks": [
         {
@@ -98,7 +95,6 @@
     },
     {
       "id": "priesthood-and-sacrifice",
-      "scope": "Sanctuary Foundations",
       "title": "Priesthood, Melchizedek, and Sacrifice",
       "blocks": [
         {
@@ -127,7 +123,6 @@
     },
     {
       "id": "heavenly-ministry-and-judgment",
-      "scope": "Christ’s Present Work",
       "title": "The Heavenly Sanctuary and Judgment",
       "blocks": [
         {
@@ -150,7 +145,6 @@
     },
     {
       "id": "new-covenant-and-access",
-      "scope": "Promise Fulfilled",
       "title": "The New Covenant and Access to God",
       "blocks": [
         {
@@ -171,7 +165,6 @@
     },
     {
       "id": "structure",
-      "scope": "Reading Map",
       "title": "The Structure of Hebrews",
       "blocks": [
         {

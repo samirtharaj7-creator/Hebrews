@@ -23,7 +23,6 @@ const backgroundContentSchema = z.object({
   subtitle: text,
   sections: z.array(z.object({
     id: text,
-    scope: text,
     title: text,
     blocks: z.array(block).min(1)
   })).min(1)
