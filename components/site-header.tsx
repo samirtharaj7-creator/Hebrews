@@ -8,7 +8,7 @@ import { useState } from "react";
 const links = [
   { href: "/", label: "Home", active: (pathname: string) => pathname === "/" },
   { href: "/background", label: "Introduction", active: (pathname: string) => pathname === "/background" },
-  { href: "/hebrews/1", label: "Hebrews", active: (pathname: string) => pathname.startsWith("/hebrews") }
+  { href: "/hebrews/1", label: "Commentary", active: (pathname: string) => pathname.startsWith("/hebrews") }
 ];
 
 export function SiteHeader() {

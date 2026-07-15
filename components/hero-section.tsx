@@ -1,5 +1,26 @@
 import Link from "next/link";
-import { ArrowRight, BookOpen } from "lucide-react";
+import { ArrowRight, BookOpen, BookOpenCheck } from "lucide-react";
+
+const studyActions = [
+  {
+    title: "Introduction",
+    href: "/background/",
+    description: "Read Hebrews’ author, date, audience, structure, and central message.",
+    icon: BookOpenCheck
+  },
+  {
+    title: "Hebrews",
+    href: "/hebrews/1/",
+    description: "Move through all thirteen chapters with the complete King James text.",
+    icon: BookOpen
+  },
+  {
+    title: "Verse Commentary",
+    href: "/hebrews/1/#v1",
+    description: "Study Christ, covenant, priesthood, sanctuary, and persevering faith verse by verse.",
+    icon: BookOpen
+  }
+] as const;
 
 export function HeroSection() {
   return (
@@ -19,6 +40,24 @@ export function HeroSection() {
               <Link href="/background" className="home-showcase-secondary">Explore the introduction</Link>
             </div>
           </div>
+        </section>
+        <section className="home-action-grid" aria-label="Primary study paths">
+          {studyActions.map((action) => {
+            const Icon = action.icon;
+            return (
+              <Link key={action.href} href={action.href} className="home-action-card">
+                <span className="home-action-icon">
+                  <Icon className="h-5 w-5" />
+                </span>
+                <strong>{action.title}</strong>
+                <span>{action.description}</span>
+                <em>
+                  Open
+                  <ArrowRight className="h-4 w-4" />
+                </em>
+              </Link>
+            );
+          })}
         </section>
         <section className="home-chapter-study" aria-labelledby="home-chapter-title">
           <div className="home-section-split">
