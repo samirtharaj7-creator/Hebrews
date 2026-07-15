@@ -244,8 +244,38 @@ export function ChapterStudy({
   const scriptureDesktopFontSize = clampNumber(20 + scriptureLevel * 2, 18, 30);
   const notesFontSize = clampNumber(18 + notesLevel * 2, 16, 24);
   const chapterTheme = chapter.title || chapter.themes[0] || "";
-  const hasDetailedExplanation = Boolean(selectedVerse.commentary.detailedExplanation.trim());
-  const hasStudyLinks = selectedVerse.crossReferences.length > 0 || selectedVerse.wordNotes.length > 0;
+
+  function renderVerseNotes(verse: PublicVerseEntry, mode: "desktop" | "mobile") {
+    const hasDetailedExplanation = Boolean(verse.commentary.detailedExplanation.trim());
+    const hasStudyLinks = verse.crossReferences.length > 0 || verse.wordNotes.length > 0;
+    const articleClassName = hasDetailedExplanation || hasStudyLinks
+      ? "exposition-card"
+      : "exposition-card exposition-card-blank";
+
+    return (
+      <article
+        className={articleClassName}
+        id={mode === "mobile" ? `${slugify(verse.verse)}-notes` : undefined}
+      >
+        <div className="exposition-card-heading">
+          <h2>{verse.verse}</h2>
+        </div>
+        {hasDetailedExplanation ? (
+          <DetailedExplanation value={verse.commentary.detailedExplanation} />
+        ) : (
+          <div className="commentary-blank-space" aria-label={`Blank study notes for ${verse.verse}`} />
+        )}
+        {hasStudyLinks ? (
+          <VerseStudyCard
+            key={verse.verse}
+            crossReferences={verse.crossReferences}
+            referencePreviews={referencePreviews}
+            wordNotes={verse.wordNotes}
+          />
+        ) : null}
+      </article>
+    );
+  }
 
   return (
     <section
@@ -309,6 +339,11 @@ export function ChapterStudy({
                     active={verse.verse === selectedVerse.verse}
                     onSelect={() => selectVerse(verse)}
                   />
+                  {verse.verse === selectedVerse.verse ? (
+                    <div className="mobile-verse-notes" role="region" aria-label={`Study notes for ${verse.verse}`}>
+                      {renderVerseNotes(verse, "mobile")}
+                    </div>
+                  ) : null}
                 </div>
               );
             })}
@@ -332,24 +367,7 @@ export function ChapterStudy({
         </div>
         <div className="commentary-pane-body">
           <div className="commentary-shell">
-          <article className={hasDetailedExplanation || hasStudyLinks ? "exposition-card" : "exposition-card exposition-card-blank"}>
-            <div className="exposition-card-heading">
-              <h2>{selectedVerse.verse}</h2>
-            </div>
-            {hasDetailedExplanation ? (
-              <DetailedExplanation value={selectedVerse.commentary.detailedExplanation} />
-            ) : (
-              <div className="commentary-blank-space" aria-label={`Blank study notes for ${selectedVerse.verse}`} />
-            )}
-            {hasStudyLinks ? (
-              <VerseStudyCard
-                key={selectedVerse.verse}
-                crossReferences={selectedVerse.crossReferences}
-                referencePreviews={referencePreviews}
-                wordNotes={selectedVerse.wordNotes}
-              />
-            ) : null}
-          </article>
+            {renderVerseNotes(selectedVerse, "desktop")}
           </div>
         </div>
       </aside>
@@ -401,9 +419,13 @@ function FontScaleControls({
 }
 
 function VerseButton({ index, verse, active, onSelect }: { index: number; verse: PublicVerseEntry; active: boolean; onSelect: () => void }) {
+  const verseId = slugify(verse.verse);
+
   return (
     <button
-      id={slugify(verse.verse)}
+      aria-controls={`${verseId}-notes`}
+      aria-expanded={active}
+      id={verseId}
       className={active ? "scripture-card scripture-card-active" : "scripture-card"}
       onClick={onSelect}
       type="button"
