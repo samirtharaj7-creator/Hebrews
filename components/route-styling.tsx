@@ -19,6 +19,7 @@ export function RouteStyling() {
 
     if (path === "/") body.dataset.hebrewsRoute = "home";
     else if (path === "/background") body.dataset.hebrewsRoute = "introduction";
+    else if (path === "/articles" || path.startsWith("/articles/")) body.dataset.hebrewsRoute = "articles";
     else if (chapterMatch) {
       body.dataset.hebrewsRoute = "commentary";
       body.dataset.hebrewsChapter = chapterMatch[1];
