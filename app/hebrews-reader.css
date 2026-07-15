@@ -4,6 +4,114 @@ body[data-hebrews-route="commentary"] .exposition-card-blank {
   flex-direction: column;
 }
 
+/* KJV previews for Cross References and Word / Phrase Note links. */
+body[data-hebrews-route="commentary"] .scripture-reference-preview {
+  display: inline-flex;
+  min-width: 0;
+  max-width: 100%;
+}
+
+body[data-hebrews-route="commentary"] .reference-chip,
+body[data-hebrews-route="commentary"] .word-reference-chip {
+  appearance: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+body[data-hebrews-route="commentary"] .word-reference-chip {
+  border: 0;
+}
+
+body[data-hebrews-route="commentary"] .reference-chip:hover {
+  border-color: #d8b866 !important;
+  background: rgba(201, 164, 76, .18) !important;
+  color: #fff2d4 !important;
+}
+
+body[data-hebrews-route="commentary"] .word-reference-chip:hover {
+  color: #fff2d4 !important;
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+
+body[data-hebrews-route="commentary"] .reference-chip:focus-visible,
+body[data-hebrews-route="commentary"] .word-reference-chip:focus-visible {
+  outline: 2px solid #f0cb70;
+  outline-offset: 3px;
+}
+
+body[data-hebrews-route="commentary"] .reference-preview-popup {
+  position: fixed;
+  z-index: 3000;
+  width: min(28rem, calc(100vw - 1.5rem));
+  max-height: min(28rem, calc(100vh - 1.5rem));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  border: 1px solid rgba(216, 184, 102, .72);
+  border-radius: .55rem;
+  background: rgba(7, 17, 28, .985);
+  color: #eee3cc;
+  padding: .9rem 1rem 1rem;
+  box-shadow: 0 1rem 2.6rem rgba(0, 0, 0, .48);
+  opacity: 0;
+  transform: translateY(3px);
+  pointer-events: auto;
+  transition: opacity 120ms ease, transform 120ms ease;
+}
+
+body[data-hebrews-route="commentary"] .reference-preview-popup[data-ready="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body[data-hebrews-route="commentary"] .reference-preview-heading {
+  margin: 0 0 .65rem;
+  color: #d8b866;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-size: .88rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  line-height: 1.3;
+}
+
+body[data-hebrews-route="commentary"] .reference-preview-verses {
+  display: grid;
+  gap: .65rem;
+}
+
+body[data-hebrews-route="commentary"] .reference-preview-verses p,
+body[data-hebrews-route="commentary"] .reference-preview-continuation,
+body[data-hebrews-route="commentary"] .reference-preview-unavailable {
+  margin: 0;
+  color: #eee3cc;
+  font-family: var(--font-serif), Georgia, "Times New Roman", serif;
+  font-size: .98rem;
+  font-weight: 400;
+  line-height: 1.58;
+}
+
+body[data-hebrews-route="commentary"] .reference-preview-verses p span {
+  margin-right: .45rem;
+  color: #d8b866;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-size: .78em;
+  font-weight: 700;
+}
+
+body[data-hebrews-route="commentary"] .reference-preview-continuation {
+  margin-top: .75rem;
+  color: #bfb49c;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-size: .78rem;
+  font-style: italic;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body[data-hebrews-route="commentary"] .reference-preview-popup {
+    transition: none;
+  }
+}
+
 body[data-hebrews-route="commentary"] .commentary-blank-space {
   flex: 1;
   min-height: 20rem;

@@ -5,6 +5,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { BookChapterStrip } from "@/components/book-chapter-strip";
 import { ChapterStudy, type PublicChapterContent } from "@/components/verse-accordion";
 import { HEBREWS, getHebrewsChapter, getHebrewsChapterAdjacency, getHebrewsStaticParams } from "@/lib/hebrews";
+import { getReferencePreviewsForChapter } from "@/lib/reference-previews";
 import type { ChapterContent } from "@/lib/schemas";
 
 export function generateStaticParams() {
@@ -24,6 +25,7 @@ export default async function HebrewsChapterPage({ params }: { params: Promise<{
   const adjacency = getHebrewsChapterAdjacency(chapter);
   if (!content || !adjacency) notFound();
   const publicContent = withoutAuditSources(content);
+  const referencePreviews = getReferencePreviewsForChapter(content);
   return (
     <main className="reader-page">
       <BookChapterStrip
@@ -33,7 +35,11 @@ export default async function HebrewsChapterPage({ params }: { params: Promise<{
         chapterCount={HEBREWS.chapterCount}
         verseCounts={HEBREWS.verseCounts}
       />
-      <ChapterStudy chapter={publicContent} bookName={HEBREWS.name} />
+      <ChapterStudy
+        chapter={publicContent}
+        bookName={HEBREWS.name}
+        referencePreviews={referencePreviews}
+      />
       <nav className="reader-chapter-nav no-print" aria-label="Hebrews adjacent chapters">
         {adjacency.previous ? <Link href={`/hebrews/${adjacency.previous}`}><ChevronLeft className="h-4 w-4" />Hebrews {adjacency.previous}</Link> : <span />}
         {adjacency.next ? <Link href={`/hebrews/${adjacency.next}`}>Hebrews {adjacency.next}<ChevronRight className="h-4 w-4" /></Link> : null}

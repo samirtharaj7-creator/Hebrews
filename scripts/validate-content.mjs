@@ -23,6 +23,53 @@ const emptyCommentaryFields = [
   "application"
 ];
 const allowedReviewStatuses = new Set(["verified-seed", "needs-source-review", "placeholder"]);
+const scriptureBooks = new Set([
+  "Genesis", "Exodus", "Leviticus", "Numbers", "Deuteronomy", "Joshua", "Judges", "Ruth",
+  "1 Samuel", "2 Samuel", "1 Kings", "2 Kings", "1 Chronicles", "2 Chronicles", "Ezra",
+  "Nehemiah", "Esther", "Job", "Psalm", "Psalms", "Proverbs", "Ecclesiastes",
+  "Song of Solomon", "Song of Songs", "Isaiah", "Jeremiah", "Lamentations", "Ezekiel",
+  "Daniel", "Hosea", "Joel", "Amos", "Obadiah", "Jonah", "Micah", "Nahum", "Habakkuk",
+  "Zephaniah", "Haggai", "Zechariah", "Malachi", "Matthew", "Mark", "Luke", "John", "Acts",
+  "Romans", "1 Corinthians", "2 Corinthians", "Galatians", "Ephesians", "Philippians",
+  "Colossians", "1 Thessalonians", "2 Thessalonians", "1 Timothy", "2 Timothy", "Titus",
+  "Philemon", "Hebrews", "James", "1 Peter", "2 Peter", "1 John", "2 John", "3 John",
+  "Jude", "Revelation"
+]);
+const hebrewsVerseCounts = [14, 18, 19, 16, 14, 20, 28, 13, 28, 39, 40, 29, 25];
+let crossReferenceTotal = 0;
+let versesWithCrossReferences = 0;
+
+function validateScriptureReference(citation, context) {
+  if (typeof citation !== "string" || !citation.trim()) {
+    errors.push(`${context}: reference must be a nonblank string`);
+    return null;
+  }
+
+  const match = citation.trim().match(/^((?:[1-3] )?[A-Za-z]+(?: [A-Za-z]+)*) (\d+):(\d+)(?:[-–—](\d+))?$/u);
+  if (!match) {
+    errors.push(`${context}: invalid Scripture reference ${citation}`);
+    return null;
+  }
+
+  const [, bookName, chapterText, startText, endText] = match;
+  if (!scriptureBooks.has(bookName)) errors.push(`${context}: unrecognized biblical book ${bookName}`);
+  const chapter = Number(chapterText);
+  const startVerse = Number(startText);
+  const endVerse = Number(endText ?? startText);
+  if (chapter < 1) errors.push(`${context}: chapter must be positive`);
+  if (startVerse < 1) errors.push(`${context}: starting verse must be positive`);
+  if (endVerse < startVerse) errors.push(`${context}: verse range is reversed`);
+
+  if (bookName === "Hebrews") {
+    if (chapter > hebrewsVerseCounts.length) {
+      errors.push(`${context}: Hebrews has no chapter ${chapter}`);
+    } else if (endVerse > hebrewsVerseCounts[chapter - 1]) {
+      errors.push(`${context}: reference exceeds Hebrews ${chapter}:${hebrewsVerseCounts[chapter - 1]}`);
+    }
+  }
+
+  return { bookName, chapter, startVerse, endVerse };
+}
 
 function validatePrivateFieldsAreEmpty(value, field, errors) {
   if (Array.isArray(value)) {
@@ -74,6 +121,33 @@ for (const { chapterNumber, expectedVerses, path, content } of chapters) {
     for (const field of emptyCommentaryFields) {
       if (verse.commentary[field]?.trim()) errors.push(`${expectedReference}: commentary.${field} must remain empty`);
     }
+
+    const crossReferences = Array.isArray(verse.crossReferences) ? verse.crossReferences : [];
+    if (!Array.isArray(verse.crossReferences)) {
+      errors.push(`${expectedReference}: crossReferences must be an array`);
+    } else {
+      if (crossReferences.length > 5) errors.push(`${expectedReference}: include no more than five selective cross references`);
+      if (crossReferences.length > 0) versesWithCrossReferences += 1;
+    }
+    crossReferenceTotal += crossReferences.length;
+    const seenCrossReferences = new Set();
+    crossReferences.forEach((citation, referenceIndex) => {
+      const context = `${expectedReference}: crossReferences[${referenceIndex}]`;
+      const parsed = validateScriptureReference(citation, context);
+      if (typeof citation !== "string") return;
+      const normalized = citation.trim().toLocaleLowerCase().replace(/[–—]/gu, "-");
+      if (seenCrossReferences.has(normalized)) errors.push(`${expectedReference}: duplicate cross reference ${citation}`);
+      seenCrossReferences.add(normalized);
+      if (
+        parsed?.bookName === "Hebrews"
+        && parsed.chapter === chapterNumber
+        && parsed.startVerse <= index + 1
+        && parsed.endVerse >= index + 1
+      ) {
+        errors.push(`${expectedReference}: cross reference must not cite its own verse or a range containing it (${citation})`);
+      }
+    });
+
     if (verse.wordNotes.length > 2) errors.push(`${expectedReference}: wordNotes may contain at most two entries`);
     const wordNoteTerms = new Set();
     verse.wordNotes.forEach((note, noteIndex) => {
@@ -107,4 +181,7 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`Content validation passed: ${chapters.length} chapters and ${verseTotal} complete KJV/commentary records.`);
+console.log(
+  `Content validation passed: ${chapters.length} chapters, ${verseTotal} complete KJV/commentary records, `
+  + `and ${crossReferenceTotal} selective cross references across ${versesWithCrossReferences} verses.`
+);

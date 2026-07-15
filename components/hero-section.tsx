@@ -10,7 +10,7 @@ export function HeroSection() {
             <p className="home-title-prefix">The Letter to the</p>
             <h1 id="home-title">Hebrews</h1>
             <p className="home-showcase-description">
-              Read the King James text of Hebrews in a thirteen-chapter workspace prepared for research and verse-by-verse commentary.
+              Read the King James text of Hebrews with a chapter-by-chapter guide and verse-by-verse study notes.
             </p>
             <div className="home-showcase-actions">
               <Link href="/hebrews/1" className="home-showcase-primary">
