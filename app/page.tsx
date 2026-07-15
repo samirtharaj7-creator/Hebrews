@@ -2,7 +2,7 @@ import { HeroSection } from "@/components/hero-section";
 import { preload } from "react-dom";
 
 export default function HomePage() {
-  preload("/assets/hebrews-hero-engraving.webp", {
+  preload("/assets/hebrews-hero-engraving.webp?v=mbe-20260715-1", {
     as: "image",
     type: "image/webp",
     fetchPriority: "high"

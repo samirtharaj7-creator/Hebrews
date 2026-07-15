@@ -33,7 +33,7 @@ function BackgroundBlockView({ block, sectionTitle }: { block: BackgroundBlock; 
 }
 
 export default function BackgroundPage() {
-  preload("/assets/hebrews-hero-engraving.webp", {
+  preload("/assets/hebrews-hero-engraving.webp?v=mbe-20260715-1", {
     as: "image",
     type: "image/webp",
     fetchPriority: "high"
