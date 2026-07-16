@@ -31,7 +31,8 @@ export function HeroSection() {
             <p className="home-title-prefix">The Letter to the</p>
             <h1 id="home-title">Hebrews</h1>
             <p className="home-showcase-description">
-              Read the King James text of Hebrews with a chapter-by-chapter guide and verse-by-verse study notes.
+              Enter Hebrews, where Jesus is revealed as God’s supreme Son, once-for-all sacrifice, and living
+              High Priest who calls His people to draw near and endure.
             </p>
             <div className="home-showcase-actions">
               <Link href="/hebrews/1" className="home-showcase-primary">
