@@ -11,13 +11,16 @@ const subsectionBlock = z.object({
   title: text,
   body: z.array(text).min(1)
 });
+const headingBlock = z.object({ type: z.literal("heading"), title: text });
 const comparisonBlock = z.object({
   type: z.literal("comparison"),
   title: text,
-  headers: z.tuple([text, text, text]),
-  rows: z.array(z.tuple([text, text, text])).min(1)
+  headers: z.array(text).min(2),
+  rows: z.array(z.array(text).min(2)).min(1)
+}).refine((value) => value.rows.every((row) => row.length === value.headers.length), {
+  message: "Every table row must match the header count"
 });
-const block = z.discriminatedUnion("type", [paragraphBlock, subsectionBlock, comparisonBlock]);
+const block = z.discriminatedUnion("type", [paragraphBlock, headingBlock, subsectionBlock, comparisonBlock]);
 const backgroundContentSchema = z.object({
   title: text,
   subtitle: text,

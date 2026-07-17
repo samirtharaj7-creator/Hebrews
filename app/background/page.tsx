@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 
 function BackgroundBlockView({ block, sectionTitle }: { block: BackgroundBlock; sectionTitle: string }) {
   if (block.type === "paragraph") return <p>{block.text}</p>;
+  if (block.type === "heading") return <h3 className="background-group-heading">{block.title}</h3>;
   if (block.type === "subsection") {
     return (
       <section className="background-subsection">
@@ -23,8 +24,8 @@ function BackgroundBlockView({ block, sectionTitle }: { block: BackgroundBlock; 
         <caption className="sr-only">{block.title}</caption>
         <thead><tr>{block.headers.map((header) => <th key={header}>{header}</th>)}</tr></thead>
         <tbody>
-          {block.rows.map((row) => (
-            <tr key={row[0]}>{row.map((cell, index) => <td key={`${index}-${cell.slice(0, 24)}`}>{cell}</td>)}</tr>
+          {block.rows.map((row, rowIndex) => (
+            <tr key={`${rowIndex}-${row[0]}`}>{row.map((cell, index) => <td key={`${index}-${cell.slice(0, 24)}`}>{cell}</td>)}</tr>
           ))}
         </tbody>
       </table>
