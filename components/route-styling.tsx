@@ -30,12 +30,6 @@ export function RouteStyling() {
       body.dataset.hebrewsRoute = "commentary";
       body.dataset.hebrewsChapter = chapterMatch[1];
       resetReaderViewport();
-      const frame = window.requestAnimationFrame(resetReaderViewport);
-      const timer = window.setTimeout(resetReaderViewport, 120);
-      return () => {
-        window.cancelAnimationFrame(frame);
-        window.clearTimeout(timer);
-      };
     } else body.removeAttribute("data-hebrews-route");
   }, [pathname]);
 
